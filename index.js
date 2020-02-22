@@ -12,7 +12,9 @@ let appDirectory = `${process.cwd()}/${appName}`
 
 // Main Run Function
 const run = async () => {
+  // Start
   console.log(`Creating ${appName}...\n`)
+  // Step 1
   let success = await createReactApp()
   if (!success) {
     console.log(
@@ -20,9 +22,13 @@ const run = async () => {
     )
     return false
   }
+  // Step 2
   await cdIntoNewApp()
+  // Step 3
   await installPackages()
+  // Step 4
   await updateTemplates()
+  // Finish
   console.log(colors.bold.brightGreen(`Congrats you have created ${appName}\n`))
   console.log(colors.bold.brightRed('VERY IMPORTANT:'))
   console.log(
