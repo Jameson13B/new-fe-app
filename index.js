@@ -23,12 +23,12 @@ const run = async () => {
   await cdIntoNewApp()
   await installPackages()
   await updateTemplates()
-  console.log(colors.bold.green(`Congrats you have created ${appName}\n`))
-  console.log(colors.bold.red('VERY IMPORTANT:'))
+  console.log(colors.bold.brightGreen(`Congrats you have created ${appName}\n`))
+  console.log(colors.bold.brightRed('VERY IMPORTANT:'))
   console.log(
     'Update the .env file(.env.example > .env) at the root of your project and add firebase and other variables.\n',
   )
-  console.log(`cd into ${appName}\n`)
+  console.log(`cd ${appName}\n`)
   console.log('yarn start\n')
 }
 
