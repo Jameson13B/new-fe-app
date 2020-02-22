@@ -8,6 +8,10 @@
   },
   "author": "Jameson Brown",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://https://github.com/Jameson13B/new-fe-app"
+  },
   "dependencies": {
     "colors": "^1.4.0",
     "dotenv": "^8.2.0",
@@ -20,6 +24,6 @@
     "styled-components": "^5.0.1"
   },
   "bin": {
-    "new-fe-app": "index.js"
+    "new-app": "index.js"
   }
 }
