@@ -1,14 +1,14 @@
 module.exports = `import React, { Component } from 'react'
-import { connect } from 'react-redux'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div style={{ textAlign: 'center' }}>
         <h2>Welcome to New FE App</h2>
+        <p>See README for details</p>
       </div>
     )
   }
 }
-export default connect(state => ({}), {})(App)
+export default App
 `

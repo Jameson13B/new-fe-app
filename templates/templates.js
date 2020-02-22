@@ -1,6 +1,7 @@
 module.exports = {
   'App.js': require('./App.js'),
   'index.js': require('./index.js'),
-  'store.js': require('./store.js'),
-  '.env.example': require('./.env.example')
+  'firebase.js': require('./firebase.js'),
+  '.env.example': require('./env.example'),
+  'README.md': require('./README.js')
 }
