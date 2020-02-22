@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 // Packages
 let shell = require('shelljs')
 let colors = require('colors')
@@ -72,7 +71,7 @@ const installPackages = () => {
       `yarn add styled-components firebase dotenv react-router-dom`,
       { silent: true },
       () => {
-        console.log('\nFinished installing 4 packages\n'.green)
+        console.log(colors.brightGreen('\nFinished installing 4 packages\n'))
         resolve()
       },
     )
@@ -83,21 +82,12 @@ const updateTemplates = () => {
     let promises = []
     Object.keys(templates).forEach((fileName, i) => {
       promises[i] = new Promise(res => {
-        if (fileName === '.env.example' || fileName === 'README.md') {
-          fs.writeFile(`${appDirectory}/${fileName}`, templates[fileName], function(err) {
-            if (err) {
-              return console.log(err)
-            }
-            res()
-          })
-        } else {
-          fs.writeFile(`${appDirectory}/src/${fileName}`, templates[fileName], function(err) {
-            if (err) {
-              return console.log(err)
-            }
-            res()
-          })
-        }
+        fs.writeFile(`${appDirectory}/${fileName}`, templates[fileName], function(err) {
+          if (err) {
+            return console.log(err)
+          }
+          res()
+        })
       })
     })
     try {

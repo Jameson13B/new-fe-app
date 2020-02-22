@@ -1,8 +1,16 @@
-## New FE App
+## ☮ New FE App
 
-### What is New FE APP?
+### What is New FE Ap?
 
 > This tool is used to bootstrap react apps with firebase, router, and styled components baked in.
+
+### How to use New FE App?
+
+> Install:  
+> `npm i -g new-fe-app`
+
+> Use:  
+> `new-app [app-name]`
 
 ---
 
