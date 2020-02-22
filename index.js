@@ -67,15 +67,12 @@ const cdIntoNewApp = () => {
 }
 const installPackages = () => {
   return new Promise(resolve => {
-    console.log(
-      '\nInstalling redux, react-redux, redux-thunk, styled-components, firebase, dotenv and react-router-dom'
-        .cyan,
-    )
+    console.log('\nInstalling styled-components, firebase, dotenv and react-router-dom'.cyan)
     shell.exec(
-      `yarn add redux react-redux redux-thunk styled-components firebase dotenv react-router-dom`,
+      `yarn add styled-components firebase dotenv react-router-dom`,
       { silent: true },
       () => {
-        console.log('\nFinished installing 7 packages\n'.green)
+        console.log('\nFinished installing 4 packages\n'.green)
         resolve()
       },
     )
@@ -86,7 +83,7 @@ const updateTemplates = () => {
     let promises = []
     Object.keys(templates).forEach((fileName, i) => {
       promises[i] = new Promise(res => {
-        if (fileName === '.env.example') {
+        if (fileName === '.env.example' || fileName === 'README.md') {
           fs.writeFile(`${appDirectory}/${fileName}`, templates[fileName], function(err) {
             if (err) {
               return console.log(err)
